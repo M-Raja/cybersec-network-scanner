@@ -280,19 +280,6 @@ ping -c 4 [target_ip]
 telnet [target_ip] [port]
 ```
 
-
-
-## Educational Resources
-
-### Recommended Reading
-- "The Web Application Hacker's Handbook"
-- "Network Security Essentials" by William Stallings
-- "Hacking: The Art of Exploitation" by Jon Erickson
-- NIST Cybersecurity Framework
-- OWASP Top 10
-
-
-
 ## Practice Scenarios
 
 ### Beginner Exercises
@@ -341,4 +328,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 [Back to Top](#network-vulnerability-scanner)
 
 </div>
+
 
