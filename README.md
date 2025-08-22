@@ -9,7 +9,7 @@
 
 **A comprehensive network port scanner and vulnerability assessment tool built in Python for educational penetration testing.**
 
- [Documentation](docs/setup_and_usage.md) • [Safety](#safety-features) • [Learning](#educational-resources)
+ [Documentation](docs/setup_and_usage.md) • [Safety](#safety-features) 
 
 </div>
 
@@ -328,5 +328,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 [Back to Top](#network-vulnerability-scanner)
 
 </div>
+
 
 
