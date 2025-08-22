@@ -7,6 +7,15 @@
 ![Platform](https://img.shields.io/badge/Platform-Linux%20%7C%20Windows%20%7C%20macOS-lightgrey.svg?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen.svg?style=for-the-badge)
 
+<br>
+
+
+<img   align="center" alt="Coding" width="500" height="300" src="https://pin.it/2KV9DImMv">
+
+
+
+<br>
+
 **A comprehensive network port scanner and vulnerability assessment tool built in Python for educational penetration testing.**
 
  [Documentation](docs/setup_and_usage.md) • [Safety](#safety-features) 
@@ -48,98 +57,11 @@ This scanner helps you learn:
 - Administrative privileges (for some features)
 
 
-## Installation
+### Virtual Environment Installation
+## Quick Start
 
-### Method 1: Quick Installation
+> **📖 For detailed setup instructions, see [Setup and Usage Guide](docs/setup_and_usage.md)**
 
-1. **Clone or Download the Project**
-   ```bash
-   # Option A: Clone from repository
-   git clone https://github.com/M-Raja/cybersec-network-scanner
-   cd network-vulnerability-scanner
-   
-   # Option B: Download and extract ZIP file
-   # Extract to your desired directory
-   ```
-
-2. **Install Dependencies**
-   ```bash
-   # Install required packages
-   pip install -r requirements.txt
-   ```
-
-3. **Verify Installation**
-   ```bash
-   # Test the scanner
-   python3 simple_scanner.py --help
-   ```
-
-### Method 2: Virtual Environment Installation (Recommended)
-
-1. **Create Virtual Environment in linux**
-   ```bash
-   # Create virtual environment
-   python3 -m venv scanner_env
-   
-   # Activate virtual environment
-   # On Windows:
-   scanner_env\Scripts\activate
-   
-   # On Linux/macOS:
-   source scanner_env/bin/activate
-   ```
-
-2. **Install Dependencies**
-   ```bash
-   # Install packages in virtual environment
-   pip install -r requirements.txt
-   ```
-
-3. **Verify Installation**
-   ```bash
-   # Test the scanner
-   python3 simple_scanner.py --help
-   ```
-
-### Method 3: System-Wide Installation
-
-1. **Install System Dependencies (Linux)**
-   ```bash
-   # Update package list
-   sudo apt update
-   
-   # Install Python and pip
-   sudo apt install python3 python3-pip python3-venv
-   
-   # Install nmap (optional)
-   sudo apt install nmap
-   ```
-
-2. **Install Python Dependencies**
-   ```bash
-   # Install required packages
-   pip3 install -r requirements.txt
-   ```
-
----
-
-
-### Environment Setup
-
-1. **Network Configuration**
-   - Ensure your network allows outbound connections
-   - Configure firewall if necessary
-   - Verify DNS resolution
-
-2. **Python Environment**
-   - Verify Python version: `python --version`
-   - Check pip installation: `pip --version`
-   - Ensure virtual environment is activated (if using)
-
-3. **Scanner Configuration**
-   - No additional configuration files required
-   - Settings are handled through command-line arguments
-   - Default settings are optimized for educational use
 
 ### Security Considerations
 
@@ -328,6 +250,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 [Back to Top](#network-vulnerability-scanner)
 
 </div>
+
 
 
 
