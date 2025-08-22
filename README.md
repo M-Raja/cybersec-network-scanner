@@ -8,12 +8,12 @@
 ![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen.svg?style=for-the-badge)
 
 <br>
+<br>
+
+<img   align="center" alt="Coding" width="500" height="300" src="https://github.com/user-attachments/assets/ce6e29d7-7c6e-41e9-a121-7cc1e413c261">
 
 
-<img   align="center" alt="Coding" width="500" height="300" src="https://pin.it/2KV9DImMv">
-
-
-
+<br>
 <br>
 
 **A comprehensive network port scanner and vulnerability assessment tool built in Python for educational penetration testing.**
@@ -56,30 +56,68 @@ This scanner helps you learn:
 - Network connectivity
 - Administrative privileges (for some features)
 
+<br>
+
+### GitHub Repository Structure
+
+```bash
+
+network-vulnerability-scanner/
+│── simple_scanner.py          # Your source code
+│── README.md                  # Professional showcase doc
+│── docs/
+│    └── setup_and_usage.md    # Full setup guide (your docs)
+│── LICENSE                    # (MIT or Apache 2.0 recommended)
+│── .gitignore
+
+```
+
+<br>
+
 
 ### Virtual Environment Installation
-## Quick Start
+
+### 📥 Download & Setup
+
+🔹 Option 1: Clone with Git (recommended)
+
+```bash
+
+# Clone the repository from GitHub
+
+> git clone https://github.com/M-Raja/cybersec-network-scanner
+
+# Move into the project folder
+
+> cd cybersec-network-scanner
+
+```
+
+🔹 Option 2: Download ZIP (no Git required)
+
+```bash
+
+# Step 1: Open your browser and go to:
+
+ https://github.com/M-Raja/cybersec-network-scanner
+
+# Step 2: Click on the green "Code" button → then click "Download ZIP"
+
+# Step 3: Extract the ZIP file to your desired folder
+
+# Step 4: Open a terminal or command prompt inside the extracted folder
+
+> cd cybersec-network-scanner   # (folder name after extracting ZIP)
+
+```
+<br>
 
 > **📖 For detailed setup instructions, see [Setup and Usage Guide](docs/setup_and_usage.md)**
 
 
-### Security Considerations
-
-1. **Authorization**
-   - Only scan systems you own or have explicit permission to test
-   - Obtain written authorization before scanning any network
-   - Document your testing scope and procedures
-
-2. **Network Impact**
-   - The scanner includes rate limiting to minimize network impact
-   - Default timeouts prevent overwhelming target systems
-   - Use appropriate scan types for your environment
-
 
 
 ## Basic Usage
-
-### Interactive Mode
 
 1. **Start the Scanner**
    ```bash
@@ -150,84 +188,6 @@ This scanner helps you learn:
 - ❌ Avoid scanning during business hours
 
 
-
-## Understanding Results
-
-### Port States
-- **OPEN** - Service is running and accepting connections
-- **CLOSED** - Port is reachable but no service listening
-- **FILTERED** - Firewall blocking the port
-- **UNREACHABLE** - Host is down or network issue
-
-### Service Information
-- **Banner Grabbing** - Attempts to identify service versions
-- **Protocol Detection** - Identifies the protocol in use
-- **Service Mapping** - Maps ports to common services
-
-### Risk Assessment
-- **High Risk** - Unencrypted services, default credentials
-- **Medium Risk** - Services with known vulnerabilities
-- **Low Risk** - Properly configured secure services
-
-
-
-## Troubleshooting
-
-### Common Issues
-
-#### "Connection Refused"
-- Target is not running the service
-- Firewall is blocking connections
-- Wrong IP address
-
-#### "Timeout"
-- Network is slow
-- Target is filtering connections
-- Service is not responding
-
-#### "Permission Denied"
-- Need administrative privileges
-- Firewall blocking outbound connections
-- Network restrictions
-
-### Debug Mode
-```bash
-# Enable verbose output
-python3 simple_scanner.py --verbose --debug
-
-# Check network connectivity
-ping -c 4 [target_ip]
-
-# Test specific port manually
-telnet [target_ip] [port]
-```
-
-## Practice Scenarios
-
-### Beginner Exercises
-1. **Local Network Mapping**
-   - Scan your home network
-   - Document all devices found
-   - Identify potential security issues
-
-2. **Service Enumeration**
-   - Find web servers on your network
-   - Identify database servers
-   - Map file sharing services
-
-3. **Vulnerability Research**
-   - Research common vulnerabilities for found services
-   - Practice on intentionally vulnerable systems
-   - Learn about patch management
-
-### Advanced Exercises
-1. **Custom Scripts** - Extend the scanner with new features
-2. **Automation** - Create automated scanning workflows
-3. **Reporting** - Generate professional security reports
-4. **Integration** - Combine with other security tools
-
-
-
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
@@ -235,10 +195,13 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 🔗 Connect with Me
 
-- [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/m-raja-/)
-- [![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=flat&logo=vercel&logoColor=white)](https://rajam.vercel.app/)
-- [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/M-Raja)
 
+<div align="center">
+
+- [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/m-raja-/)  [![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=flat&logo=vercel&logoColor=white)](https://rajam.vercel.app/)  [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/M-Raja)
+
+
+</div>
 <br>
 
 
@@ -247,9 +210,10 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 **Remember: With great power comes great responsibility. Use this tool ethically and legally!**
 
-[Back to Top](#network-vulnerability-scanner)
+
 
 </div>
+
 
 
 
