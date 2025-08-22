@@ -9,11 +9,11 @@
 
 **A comprehensive network port scanner and vulnerability assessment tool built in Python for educational penetration testing.**
 
-[Quick Start](#quick-start) • [Documentation](docs/setup_and_usage.md) • [Safety](#safety-features) • [Learning](#educational-resources)
+ [Documentation](docs/setup_and_usage.md) • [Safety](#safety-features) • [Learning](#educational-resources)
 
 </div>
 
----
+
 
 ## ⚠️ **CRITICAL DISCLAIMER**
 
@@ -28,7 +28,7 @@
 - Use responsibly and ethically
 - You are responsible for ensuring proper authorization
 
----
+
 
 ## Project Overview
 
@@ -39,9 +39,7 @@ This scanner helps you learn:
 - **Ethical hacking** fundamentals
 - **Vulnerability assessment** basics
 
----
 
-## Prerequisites
 
 ### System Requirements
 - Kali Linux VM (recommended) or any Linux distribution
@@ -49,142 +47,127 @@ This scanner helps you learn:
 - Network connectivity
 - Administrative privileges (for some features)
 
-### Required Packages
-```bash
-# Update system
-sudo apt update && sudo apt upgrade -y
 
-# Install Python dependencies
-sudo apt install python3-pip python3-venv nmap -y
+## Installation
 
-# Install Python requirements
-pip install -r requirements.txt
-```
+### Method 1: Quick Installation
+
+1. **Clone or Download the Project**
+   ```bash
+   # Option A: Clone from repository
+   git clone https://github.com/M-Raja/cybersec-network-scanner
+   cd network-vulnerability-scanner
+   
+   # Option B: Download and extract ZIP file
+   # Extract to your desired directory
+   ```
+
+2. **Install Dependencies**
+   ```bash
+   # Install required packages
+   pip install -r requirements.txt
+   ```
+
+3. **Verify Installation**
+   ```bash
+   # Test the scanner
+   python3 simple_scanner.py --help
+   ```
+
+### Method 2: Virtual Environment Installation (Recommended)
+
+1. **Create Virtual Environment in linux**
+   ```bash
+   # Create virtual environment
+   python3 -m venv scanner_env
+   
+   # Activate virtual environment
+   # On Windows:
+   scanner_env\Scripts\activate
+   
+   # On Linux/macOS:
+   source scanner_env/bin/activate
+   ```
+
+2. **Install Dependencies**
+   ```bash
+   # Install packages in virtual environment
+   pip install -r requirements.txt
+   ```
+
+3. **Verify Installation**
+   ```bash
+   # Test the scanner
+   python3 simple_scanner.py --help
+   ```
+
+### Method 3: System-Wide Installation
+
+1. **Install System Dependencies (Linux)**
+   ```bash
+   # Update package list
+   sudo apt update
+   
+   # Install Python and pip
+   sudo apt install python3 python3-pip python3-venv
+   
+   # Install nmap (optional)
+   sudo apt install nmap
+   ```
+
+2. **Install Python Dependencies**
+   ```bash
+   # Install required packages
+   pip3 install -r requirements.txt
+   ```
 
 ---
 
-## Quick Start
 
-> **📖 For detailed setup instructions, see [Setup and Usage Guide](docs/setup_and_usage.md)**
+### Environment Setup
 
-### Step 1: Clone & Setup
-```bash
-# Create project directory
-mkdir ~/network_vuln_scanner
-cd ~/network_vuln_scanner
+1. **Network Configuration**
+   - Ensure your network allows outbound connections
+   - Configure firewall if necessary
+   - Verify DNS resolution
 
-# Create virtual environment
-python3 -m venv scanner_env
-source scanner_env/bin/activate
+2. **Python Environment**
+   - Verify Python version: `python --version`
+   - Check pip installation: `pip --version`
+   - Ensure virtual environment is activated (if using)
 
-# Install dependencies
-pip3 install -r requirements.txt
-```
+3. **Scanner Configuration**
+   - No additional configuration files required
+   - Settings are handled through command-line arguments
+   - Default settings are optimized for educational use
 
-### Step 2: Download Scanner
-```bash
-# Download the scanner
-wget https://raw.githubusercontent.com/your-repo/simple_scanner.py
-# OR copy the simple_scanner.py file to your project directory
+### Security Considerations
 
-# Make executable
-chmod +x simple_scanner.py
-```
+1. **Authorization**
+   - Only scan systems you own or have explicit permission to test
+   - Obtain written authorization before scanning any network
+   - Document your testing scope and procedures
 
-### Step 3: Run Your First Scan
-```bash
-# Test the scanner
-python3 simple_scanner.py
+2. **Network Impact**
+   - The scanner includes rate limiting to minimize network impact
+   - Default timeouts prevent overwhelming target systems
+   - Use appropriate scan types for your environment
 
-# Enter: 127.0.0.1 (localhost - always safe!)
-# Choose: 1 (Quick scan)
-```
 
----
 
-## Usage Guide
+## Basic Usage
 
 ### Interactive Mode
-The scanner will prompt you for:
-1. **Target IP Address** - Enter the IP you want to scan
-2. **Scan Type** - Choose from:
-   - Quick scan (common ports)
-   - Range scan (custom ports)
-   - Full scan (1-1000)
 
-### Command Line Options
-```bash
-# Scan specific IP
-python3 simple_scanner.py --target 127.0.0.1
+1. **Start the Scanner**
+   ```bash
+   python simple_scanner.py
+   ```
 
-# Quick scan only
-python3 simple_scanner.py --quick
-
-# Verbose output
-python3 simple_scanner.py --verbose
-```
-
----
-
-## Testing & Practice
-
-### Safe Testing Targets (In Order of Safety)
-
-#### 1. Localhost (Always Safe)
-```bash
-# Target: 127.0.0.1
-# Expected: Local services, development servers
-python3 simple_scanner.py
-# Enter: 127.0.0.1
-```
-
-#### 2. Your Own VM
-```bash
-# Find your VM's IP
-ip addr show
-
-# Look for: 192.168.x.x or 10.0.x.x
-# Example: 10.0.2.15 (NAT network)
-```
-
-#### 3. Your Windows Host
-```bash
-# On Windows CMD:
-ipconfig
-# Note the IPv4 Address
-
-# From Kali, scan that IP
-```
-
-#### 4. Your Router (Be Careful!)
-```bash
-# Usually: 192.168.1.1 or 10.0.0.1
-# Only scan your own router!
-```
-
-### Finding IP Addresses
-
-#### In Kali Linux:
-```bash
-# Show all network interfaces
-ip addr show
-
-# Show routing table
-ip route show
-
-# Quick IP check
-hostname -I
-```
-
-#### In Windows:
-```bash
-# Open CMD and type:
-ipconfig
-
-# Look for "IPv4 Address" under your active adapter
-```
-
----
+2. **Follow the Prompts**
+   - Enter target IP address when prompted
+   - Choose scan type (1-3)
+   - Wait for scan completion
 
 ## What to Look For
 
@@ -223,7 +206,7 @@ ipconfig
 - **Management**: 80 (web interface), 22 (SSH)
 - **Services**: 53 (DNS), 67 (DHCP)
 
----
+
 
 ## Safety Features
 
@@ -244,7 +227,7 @@ ipconfig
 - ❌ Don't scan production systems
 - ❌ Avoid scanning during business hours
 
----
+
 
 ## Understanding Results
 
@@ -264,7 +247,7 @@ ipconfig
 - **Medium Risk** - Services with known vulnerabilities
 - **Low Risk** - Properly configured secure services
 
----
+
 
 ## Troubleshooting
 
@@ -297,16 +280,9 @@ ping -c 4 [target_ip]
 telnet [target_ip] [port]
 ```
 
----
+
 
 ## Educational Resources
-
-### Learning Path
-1. **Network Fundamentals** - Understand TCP/IP, ports, protocols
-2. **Reconnaissance** - Learn passive and active information gathering
-3. **Vulnerability Assessment** - Identify security weaknesses
-4. **Penetration Testing** - Ethical hacking methodologies
-5. **Security Hardening** - Learn to secure systems
 
 ### Recommended Reading
 - "The Web Application Hacker's Handbook"
@@ -315,13 +291,7 @@ telnet [target_ip] [port]
 - NIST Cybersecurity Framework
 - OWASP Top 10
 
-### Online Resources
-- [PortSwigger Web Security Academy](https://portswigger.net/web-security)
-- [HackTheBox](https://www.hackthebox.com/)
-- [TryHackMe](https://tryhackme.com/)
-- [VulnHub](https://www.vulnhub.com/)
 
----
 
 ## Practice Scenarios
 
@@ -347,70 +317,12 @@ telnet [target_ip] [port]
 3. **Reporting** - Generate professional security reports
 4. **Integration** - Combine with other security tools
 
----
 
-## Legal & Ethical Considerations
-
-### Legal Requirements
-- **Authorization** - Always get written permission
-- **Scope** - Define clear testing boundaries
-- **Documentation** - Keep detailed records
-- **Compliance** - Follow relevant regulations
-
-### Ethical Guidelines
-- **Do No Harm** - Avoid disrupting services
-- **Respect Privacy** - Don't access unauthorized data
-- **Professional Conduct** - Maintain confidentiality
-- **Continuous Learning** - Stay updated on best practices
-
----
-
-## Contributing
-
-### How to Contribute
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
-
-### Code Standards
-- Follow PEP 8 style guidelines
-- Add comprehensive comments
-- Include error handling
-- Write unit tests
-- Update documentation
-
----
-
-## Support & Community
-
-### Getting Help
-- Check the troubleshooting section
-- Search existing issues
-- Create a detailed bug report
-- Join the community discussions
-
-### Community Guidelines
-- Be respectful and professional
-- Help others learn
-- Share knowledge responsibly
-- Report security issues privately
-
----
 
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## Acknowledgments
-
-- Inspired by educational security tools
-- Built with open-source libraries
-- Community contributions welcome
-- Special thanks to the security research community
-
----
 
 ## 🔗 Connect with Me
 
@@ -420,7 +332,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 <br>
 
----
+
 
 <div align="center">
 
@@ -429,3 +341,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 [Back to Top](#network-vulnerability-scanner)
 
 </div>
+
